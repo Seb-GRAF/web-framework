@@ -1,0 +1,19 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start:db": "json-server -w db.json"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
