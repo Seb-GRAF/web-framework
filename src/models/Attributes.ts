@@ -1,12 +1,12 @@
-interface HasData {
-  data?: {}
-}
-
-export class Attributes<T extends HasData> {
+export class Attributes<T extends {}> {
   constructor(private data: T) {}
 
-  get(propName: string): number | string {
-    return this.data[propName]
+  get = <K extends keyof T>(key: K): T[K] => {
+    return this.data[key]
+  }
+
+  getAll = (): T => {
+    return this.data
   }
 
   set(update: T): void {
